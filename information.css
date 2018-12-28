@@ -1,0 +1,88 @@
+.info_banner{
+    width: 100%h;
+    height: 70vh;
+    background: url("images/info-banner.jpg") no-repeat right bottom;
+    background-size: cover;
+}
+/* --------------------step開始------------------- */
+.step_content{
+    margin: 60px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.row-reverse{
+    flex-direction: row-reverse;
+}
+.step_l{
+    width: 270px;
+    height: 270px;
+    background: url(images/dog1.jpg);
+    background-size: cover;
+    clip-path: circle(50% at 50% 50%);
+    margin-right: 90px;
+}
+.pic_1{
+    background: url(images/step/step_1.jpg);
+}
+.pic_2{
+    background: url(images/step/step_2.jpg);
+}
+.pic_3{
+    background: url(images/step/step_3.jpg);
+}
+.pic_4{
+    background: url(images/step/step_4.jpg);
+}
+.pic_5{
+    background: url(images/step/step_5.jpg);
+}
+.pic_6{
+    background: url(images/step/step_6.jpg);
+}
+.step_r{
+    width: 200px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 90px;
+}
+.step_r h5{
+    font-size: 4em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    color: #2abcba;
+    opacity: 0.7;
+}
+.step_r h3{
+    font-size: 2em;
+    font-weight: 600;
+    color: #2e2e2e;
+    margin: 20px 0;
+}
+.step_r p{
+    color: #2e2e2e;
+}
+/* --------------------step結束------------------- */
+
+/* --------------------mobile開始------------------- */
+@media screen and (max-width: 768px){
+    body{
+        font-size: 18px;
+    }
+    .info_banner{
+        height: 40vh;
+    }
+    .step_content{
+        flex-direction: column-reverse;
+    }
+    .step_l{
+        margin-right: 0;
+    }
+    .step_r{
+        margin-bottom: 40px;
+        margin-right: 0;
+    } 
+}
+/* --------------------mobile結束------------------- */

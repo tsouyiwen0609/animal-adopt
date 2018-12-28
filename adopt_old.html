@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>我要領養</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/Logo.png" />
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="adopt.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/Logo.svg" alt="logo">
+                    <h1>寵物認養</h1>
+                </a>
+            </div>
+            <div>
+                <ul class="menu"> 
+                    <li><a class="underline_none" href="index.html">首頁</a></li>
+                    <li><a class="underline_none" href="">如何認養</a></li>
+                    <li><a class="underline position" href="adopt.html">我要認養</a></li>
+                    <li><a class="underline_none" href="news.html">相關活動訊息</a></li>
+                </ul>
+            </div>
+            <div class="showmenu">
+                <div class="bar bar1 transition"></div>
+                <div class="bar bar2 transition"></div>
+                <div class="bar bar3 transition"></div>
+            </div>
+        </nav>    
+    </header>
+    <section class="search">
+       <div class="search_content">
+            <form>
+                <div class="search_content_one">
+                    <div class="type">
+                        動物類別：
+                        <input type="radio" name="type" value="dog">犬
+                        <input type="radio" name="type" value="cat">貓
+                        <input type="radio" name="type" value="rabbit">兔子
+                        <input type="radio" name="type" value="mouse">老鼠
+                    </div>
+                    <div class="gender">
+                        性別：
+                        <select name="gender" id="gender">
+                            <option value="all">全部</option>
+                            <option value="male">公</option>
+                            <option value="female">母</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="search_content_two">
+                    <div class="place">
+                        收容所：
+                        <select name="place">
+                            <option value="all">全部</option>
+                            <option value="N1">新北市板橋動物之家</option>
+                            <option value="N2">臺北市動物之家</option>
+                            <option value="N3">新竹縣動物收容所</option>
+                            <option value="N4">雲林縣流浪動物收容所</option>
+                        </select>
+                    </div>
+                    <div class="number">
+                        動物編號：
+                        <input type="text" placeholder="請輸入動物編號">
+                    </div>
+                </div>
+            </form>
+            <div class="search_btn">
+                <div class="btn_search">搜尋</div>
+                <div class="btn_all"><h5>看全部</h5></div>
+            </div>
+       </div>   
+    </section>
+    <section class="pet">
+        <p class="total">共7隻</p>
+        <div class="pet_list">
+            <div class="pet_style" data-gender="male">
+                <div class="pet_img"  >
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：米格魯<br>性別：公<br>所在地：新北市</p>
+                </div>
+            </div>
+            <div class="pet_style" data-gender="female">
+                <div class="pet_img">
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：三線鼠<br>性別：母<br>所在地：新北市</p>
+                </div>
+            </div>
+            <div class="pet_style" data-gender="male">
+                <div class="pet_img"  >
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：迷你兔<br>性別：公<br>所在地：新北市</p>
+                </div>
+            </div>
+            <div class="pet_style" data-gender="female">
+                    <div class="pet_img"  >
+                        <img src="images/dog1.jpg" alt="">
+                    </div>
+                    <div class="pet_detail">
+                        <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                        <p>品種：米克斯<br>性別：母<br>所在地：新北市</p>
+                    </div>
+            </div>
+            <div class="pet_style" data-gender="male">
+                <div class="pet_img"  >
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：貴賓<br>性別：公<br>所在地：新北市</p>
+                </div>
+            </div>
+            <div class="pet_style" data-gender="male">
+                <div class="pet_img"  >
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：米格魯<br>性別：公 <br>所在地：新北市</p>
+                </div>
+            </div>
+            <div class="pet_style" data-gender="male">
+                <div class="pet_img"  >
+                    <img src="images/dog1.jpg" alt="">
+                </div>
+                <div class="pet_detail">
+                    <img class="pet_icon" src="images/icon/dog (1).svg" alt="">
+                    <p>品種：金吉拉<br>性別：公<br>所在地：新北市</p>
+                </div>
+            </div>
+        </div>
+        <div class="top" id="top">
+            <img src="images/icon/TOP.svg" alt="top">
+        </div>
+    </section>
+    <footer>
+        <p>Copyright © 2018 Pet-Adopt All rights reserved.</p>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script>
+        // Go Top功能
+        $(window).scroll(function(){
+            if($(this).scrollTop() >1){
+                $("#top").fadeIn(); 
+            } else{
+                $("#top").fadeOut();
+            }
+        }); // 當window的scrolltop距离大於1，top按钮淡出，反之淡入
+        
+        $("#top").click(function(){
+            $("html, body").animate({scrollTop: 0}, 800);
+        });
+
+        // hamburger list
+        $(".showmenu").on("click", function(e){
+            $(this).toggleClass("active");
+            e.preventDefault();
+            $("body").toggleClass("menu-show");
+        });
+    </script>
+</body>
+</html>

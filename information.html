@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>如何認養</title>
+    <link rel="Shortcut Icon" type="image/x-icon" href="images/icon/logo.png" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="common.css">
+    <link rel="stylesheet" href="information.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="images/icon/logo.svg" alt="logo">
+                    <h1>寵物認養</h1>
+                </a>
+            </div>
+            <div>
+                <ul class="menu"> 
+                    <li><a class="underline_none" href="index.html">首頁</a></li>
+                    <li><a class="underline position" href="information.html">如何認養</a></li>
+                    <li><a class="underline_none" href="adopt.html">我要認養</a></li>
+                    <li><a class="underline_none" href="news.html">相關活動訊息</a></li>
+                </ul>
+            </div>
+            <div class="showmenu">
+                <div class="bar bar1 transition"></div>
+                <div class="bar bar2 transition"></div>
+                <div class="bar bar3 transition"></div>
+            </div>
+        </nav>    
+    </header>
+    <section class="info_banner"></section>
+    <section class="step">
+        <div class="step_content wow slideInLeft " data-wow-duration="2s">
+            <div class="step_l pic_1"></div>
+            <div class="step_r">
+                <h5>01</h5>
+                <h3>預約參觀時間</h3>
+                <p>於網路上或打電話預約參訪時間。</p>
+            </div>
+        </div>
+        <div class="step_content row-reverse wow slideInRight" data-wow-duration="2s">
+            <div class="step_l pic_2"></div>
+            <div class="step_r">
+                <h5>02</h5>
+                <h3>第一次接觸</h3>
+                <p>參訪動物舍，與寵物實際互動、深入了解其個性。</p>
+            </div>
+        </div>
+        <div class="step_content wow slideInLeft" data-wow-duration="2s">
+            <div class="step_l pic_3"></div>
+            <div class="step_r">
+                <h5>03</h5>
+                <h3>認養寵物</h3>
+                <p>確定認養後，與工作人員討論將來的生活環境並提醒注意細節。</p>
+            </div>
+            </div>
+        <div class="step_content row-reverse wow slideInRight" data-wow-duration="2s">
+            <div class="step_l pic_4"></div>
+            <div class="step_r">
+                <h5>04</h5>
+                <h3>填寫申請書</h3>
+                <p>填寫認養申請書、核對申請書及身份證件，並繳交費用。</p>
+            </div>
+        </div>
+        <div class="step_content wow slideInLeft" data-wow-duration="2s">
+            <div class="step_l pic_5"></div>
+            <div class="step_r">
+                <h5>05</h5>
+                <h3>健康檢查</h3>
+                <p>由獸醫師進行健康檢查，並植入晶片、注射狂犬病預防(狗、貓)。</p>
+            </div>
+            </div>
+        <div class="step_content row-reverse wow slideInRight" data-wow-duration="2s">
+            <div class="step_l pic_6"></div>
+            <div class="step_r">
+                <h5>06</h5>
+                <h3>帶新朋友回家</h3>
+                <p>幫寵物戴上新項圈、牽繩或是放置寵物籠，就可以將新朋友帶回家。</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <div class="footer_content">
+            <div class="tour">
+                <h4>網站導覽</h4>
+                <ul>
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="information.html">如何認養</a></li>
+                    <li><a href="adopt.html">我要認養</a></li>
+                    <li><a href="news.html">相關活動訊息</a></li>
+                </ul>
+            </div>
+            <div class="time">
+                <h4>開放時間</h4>
+                <ul>
+                    <li>每週一~五：10:00~16:30</li>
+                    <li>每週六、日：10:00~13:00</li>
+                </ul>
+            </div>
+            <div class="contact">
+                <h4>聯絡我們</h4>
+                <ul>
+                    <li>(02) 2215-9462</li>
+                    <li>新北市新店區安泰路235號</li>
+                    <li>adoptpets@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <p>Copyright © 2018 Pet-Adopt All rights reserved.</p>
+    </footer>
+    <div class="top" id="top">
+        <img src="images/icon/top.svg" alt="top">
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+    <script src="wow.min.js"></script>
+    <script>
+        // Go Top功能
+        $(window).scroll(function(){
+                    if($(this).scrollTop() >1){
+                        $("#top").fadeIn(); 
+                    } else{
+                        $("#top").fadeOut();
+                    }
+                }); // 當window的scrolltop距離大於1，top按按鈕淡出，反之淡入
+
+                $("#top").click(function(){
+                    $("html, body").animate({scrollTop: 0}, 800);             
+                });
+
+        // hamburger list
+        $(".showmenu").on("click", function(e){
+                $(this).toggleClass("active");
+                e.preventDefault();
+                $("body").toggleClass("menu-show");
+            });
+
+        // slideInLeft、slideInRight    
+        new WOW().init();
+
+        // 可重複但有點奇怪
+        // window.addEventListener('scroll', function(e) {
+        // if( $(window).scrollTop() !== $(".wow").offset().top) {
+        //     $('.wow').removeClass('animated');
+        //     $('.wow').removeAttr('style');
+        //     new WOW().init();
+        // }
+        // });
+        
+    </script>
+</body>
+</html>
