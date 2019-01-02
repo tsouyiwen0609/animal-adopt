@@ -6,10 +6,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>動物認養</title>
     <link rel="Shortcut Icon" type="image/x-icon" href="images/icon/logo.png" />
-    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="flexslider.css" type="text/css">
-    <link rel="stylesheet" href="common.css">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/index.css">
 </head>
 <body>
     <header>
@@ -61,15 +61,15 @@
         <div class="container_content">
             <div class="number">
                 <div>
-                    <h5 id="num_589">589</h5>
+                    <h5 id="num_589" class="targetnum" >589</h5>
                     <h6>待認養</h6>
                 </div>
                 <div class="line">
-                    <h5 id="num_2345">2345</h5>
+                    <h5 id="num_2345" class="targetnum">2345</h5>
                     <h6>已找到家</h6>
                 </div>
                 <div>
-                    <h5 id="num_32">32</h5>
+                    <h5 id="num_32" class="targetnum">32</h5>
                     <h6>收容中心</h6>
                 </div>
             </div>
@@ -88,7 +88,7 @@
                                 2018年5月出生，米克斯，女生，所在縣市:台北市。<br>                             
                                 動物個性略述：親人、親貓、愛撒嬌，適合各種類型家庭。
                             </p>
-                            <div class="flexslider2_btn">領養Cookie</div>
+                            <div class="flexslider2_btn"><a class="flexslider2_btn_a" href="adopt.html">領養Momo</a></div>
                         </div>
                         <div class="pet_slider">
                             <img src="images/pets/cat_1.jpg" />
@@ -103,7 +103,7 @@
                                 2018年1月出生，米格魯，男生，所在縣市:新北市。<br>                             
                                 動物個性略述：親人、親狗、愛撒嬌，適合各種類型家庭。
                             </p>
-                            <div class="flexslider2_btn">領養Cookie</div>
+                            <div class="flexslider2_btn"><a class="flexslider2_btn_a" href="adopt.html">領養Cookie</a></div>
                         </div>
                         <div class="pet_slider">
                             <img src="images/pets/dog_1.jpg" />
@@ -118,7 +118,7 @@
                                 2017年3月出生，迷你兔，男生，所在縣市:新北市。<br>                             
                                 動物個性略述：親人、愛撒嬌，適合各種類型家庭。
                             </p>
-                            <div class="flexslider2_btn">領養Cookie</div>
+                            <div class="flexslider2_btn"><a class="flexslider2_btn_a" href="adopt.html">領養小不點</a></div>
                         </div>
                         <div class="pet_slider">
                             <img src="images/pets/rabbit_1.jpg" />
@@ -133,7 +133,7 @@
                                 2017年8月出生，三線鼠，男生，所在縣市:基隆市。<br>                             
                                 動物個性略述：親人、愛撒嬌，適合各種類型家庭。
                             </p>
-                            <div class="flexslider2_btn">領養Cookie</div>
+                            <div class="flexslider2_btn"><a class="flexslider2_btn_a" href="adopt.html">領養麻糬</a></div>
                         </div>
                         <div class="pet_slider">
                             <img src="images/pets/mouse_1.jpg" />
@@ -173,7 +173,7 @@
         <p>Copyright © 2018 Pet-Adopt All rights reserved.</p>
     </footer>
     <div class="top" id="top">
-        <img src="images/icon/TOP.svg" alt="top">
+        <img src="images/icon/top.svg" alt="top">
     </div>    
 
         <!-- <div id="loading" class="loading">
@@ -243,34 +243,52 @@
                 $("body").toggleClass("menu-show");
             });
 
-            // number change
-            var num1 = 574;
-            var t1 = setInterval(function(){
-                num1++;
-                var span1 = document.getElementById("num_589");
-                span1.innerText = num1;
-                if(num1==589){
-                    clearInterval(t1);
-                }       
-            }, 50);
-            var num2 = 2330;
-            var t2 = setInterval(function(){
-                num2++;
-                var span2 = document.getElementById("num_2345");
-                span2.innerText = num2;
-                if(num2==2345){
-                    clearInterval(t2);
-                }       
-            }, 50);
-            var num3 = 17;
-            var t3 = setInterval(function(){
-                num3++;
-                var span3 = document.getElementById("num_32");
-                span3.innerText = num3;
-                if(num3==32){
-                    clearInterval(t3);
-                }       
-            }, 50);   
+            //number change
+            var numberChange = $(".number"),
+                a = $(window).height(),
+                c = numberChange.offset().top,
+                changeTrue = true;
+
+            $(window).scroll(function(){
+                var b = $(this).scrollTop(),
+                span1 = document.getElementById("num_589"),
+                span2 = document.getElementById("num_2345"),
+                span3 = document.getElementById("num_32"),
+                newNum1 = span1.innerText,
+                newNum2 = span2.innerText,
+                newNum3 = span3.innerText,                 
+                num1 = parseInt(span1.innerText)-10,
+                num2 = parseInt(span2.innerText)-10,
+                num3 = parseInt(span3.innerText)-10;
+
+                if(a+b>c && changeTrue == true){
+
+                    var t1 = setInterval(function(){
+                        num1++;
+                        span1.innerText = num1;
+                        if(num1 == newNum1){
+                            clearInterval(t1);
+                        }       
+                    }, 50);
+                    var t2 = setInterval(function(){
+                        num2++;
+                        span2.innerText = num2;
+                        if(num2 == newNum2){
+                            clearInterval(t2);
+                        }       
+                    }, 50);
+                    var t3 = setInterval(function(){
+                        num3++;
+                        span3.innerText = num3;
+                        if(num3 == newNum3){
+                            clearInterval(t3);
+                        }       
+                    }, 50);
+                    changeTrue = false;
+                }
+                
+            });
+               
         </script>    
 </body> 
 </html>

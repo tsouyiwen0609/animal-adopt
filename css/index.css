@@ -1,0 +1,302 @@
+/* --------------------banner開始------------------- */
+.banner{
+    width: 100%;
+    padding-top: 60px;
+    position: relative;
+}
+.flexslider1{
+    border: none;
+    margin: 0;
+}
+.flexslider1 li{
+    width: 100%;
+    overflow: hidden;
+}
+.flexslider1 img{
+    max-width: 100%;
+    height: auto;
+    object-fit:cover;
+}
+.banner_word{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 500;
+}
+.banner_word h2{
+    font-size: 4rem;
+    font-weight: 700;
+    letter-spacing: 1rem;
+    line-height: 4rem;
+    color: #2e2e2e;
+    margin: 20px 0;
+}
+.banner_word h3{
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 0.4rem;
+    line-height: 4rem;
+    color: #2e2e2e;
+    margin: 20px 0;
+}
+.banner_btn_a{
+    font-size: 1.5rem;
+    letter-spacing: 0.8rem;
+    text-align: center;
+    text-decoration: none;
+    line-height: 4rem;
+}
+.banner_btn{
+    width: 290px;
+    height: 60px;
+    border-radius: 30px;
+    box-shadow: 0 2px 2px rgba(14,14,14,.2);
+    cursor: pointer;
+    background: url(images/icon/right-arrow.svg) no-repeat 90% 50%;
+    background-size: 20px;
+    background-color: #2abcb9;
+}
+.banner_btn:hover{
+    background-color: #1e8684;
+}
+/* --------------------banner結束------------------- */
+
+/* --------------------container開始------------------- */
+.container{
+    width: 100%;
+    background-color: #f1f3f4;              
+    padding: 64px 0;
+}
+.container_content{
+    margin: 0 auto;
+    position: relative;
+}
+.number{
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.number h5{
+    font-size: 4rem;
+    letter-spacing: 0.85rem;
+    line-height: 2.5rem;
+    color: #2e2e2e;
+    margin: 6px 40px;
+}
+.number h6{
+    font-size: 1rem;
+    letter-spacing: 0.3rem;
+    line-height: 4rem;
+    color: #8f8f8f;
+}
+.line{
+    border-right: 1px solid rgba(161, 161, 161, 0.5);
+    border-left: 1px solid rgba(161, 161, 161, 0.5);
+}
+.dog{
+    width: 500px;
+    overflow: hidden;
+}
+.bone{
+    width: 17%;
+    position: absolute;
+    top: 15%;
+    left: 14%;
+}
+.bone_icon{
+    width: 100%;
+    filter: blur(1px) opacity(70%);
+    transform: translate3d(0, 0, 0) scale(0.6) rotatex(0) rotatey(0);
+}
+.dog{
+    width: 45%;
+    margin: 40px auto 0 auto;
+}
+.dog img{
+    width: 100%;
+}
+/* --------------------container結束------------------- */
+
+/* --------------------pet_introduce開始------------------- */
+.pet_introduce{
+    width: 100%;
+    padding: 64px 0 100px 0;
+}
+.flexslider2{
+    width: 60%;
+    margin: 0 auto;
+    border: none;
+}
+.flexslider2_content{
+    display: flex;
+    justify-content: space-between;
+}
+.flexslider2_word{
+    width: 50%;
+    background-color: rgba(241, 243, 244, 0.7);
+    box-sizing: border-box;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.flexslider2_word h3{
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 1.5rem;
+    color: #2e2e2e;
+}
+.flexslider2_word p{
+    line-height: 1.5rem;
+    color: #5c5c5c;
+}
+.pet_slider{
+    width: 50%;
+    overflow: hidden;
+}
+.pet_slider img{
+    max-width: 100%;
+}
+.flexslider2_btn{
+    width: 185px;
+    height: 42px;
+    font-size: 1.125rem;
+    text-align: center;
+    line-height: 2.75rem;
+    letter-spacing: 0.2rem;
+    color: #fff;
+    background-color: #2abcb9;
+    border-radius: 20px;
+    box-shadow: 0 2px 2px rgba(14,14,14,.2);
+    cursor: pointer;
+}
+.flexslider2_btn_a{
+    text-decoration: none;
+}
+.flexslider2_btn:hover{
+    background-color: #1e8684;
+}
+/* --------------------pet_introduce結束------------------- */
+
+/* --------------------mobile開始------------------- */
+@media screen and (max-width:992px){
+    .banner_word h2{
+        font-size: 3rem;
+        letter-spacing: 0.8rem;
+    }
+    .banner_word h3{
+        font-size: 1.5rem;
+        letter-spacing: 0.4rem;
+    }
+}
+@media screen and (max-width: 768px){
+/* banner */    
+    .banner_word{
+        top: 25%;
+    }
+    .banner_word h2{
+        font-size: 2.5rem;
+        letter-spacing: 0.5rem;
+        line-height: 3rem;
+        margin: 15px 0; 
+    }
+    .banner_word h3{
+        line-height: 2rem;
+        margin: 15px 0;
+    }
+    .banner_btn_a{
+        font-size: 1.2rem;
+        letter-spacing: 0.3rem;
+        line-height: 2.6rem;
+    }
+    .banner_btn{
+        width: 240px;
+        height: 40px;
+    }
+/* container */
+    .number{
+        display: flex;
+        flex-direction: column;        
+    }
+    .number div{
+        margin-bottom: 24px;
+    }
+    .line{
+        border: none;
+    }
+    .dog{
+        width: 600px;
+    }
+    .bone{
+        width: 30%;
+        top: 35%;
+        left: 14%;
+    }
+/* pet_introduce */        
+    .flexslider2_content{
+        flex-direction: column-reverse;
+    }
+    .flexslider2_word, .pet_slider{
+        width: 100%;
+    }
+    .flexslider2_word p{
+        margin: 16px 0;
+    }
+}
+@media screen and (max-width: 590px){
+/* banner */    
+    .banner_word h2{
+        font-size: 2rem;
+    }
+    .banner_btn{
+        width: 200px;
+        height: 40px;
+    }
+/* container */
+    .dog{
+        width: 400px;
+    }
+    .bone{
+        width: 35%;
+        top: 50%;
+        left: 8%;
+    }
+}
+@media screen and (max-width: 498px){
+/* banner */
+    .banner_word{
+        top: 30%;
+        left: 43%;
+    }
+    .banner_word h2{
+        font-size: 1.5rem;
+        letter-spacing: 0.3rem;
+        line-height: 1rem;
+    }
+    .banner_word h3{
+        font-size: 1rem;
+    }
+    .banner_btn{
+        width: 160px;
+        height: 40px;
+        font-size: 1rem;
+    }
+/* container */
+    .dog{
+        width: 320px;
+    }
+    .bone{
+        width: 35%;
+        left: 5%;
+    }
+/* pet_introduce */ 
+    .flexslider2_btn{
+        width: 150px;
+        height: 42px;
+        font-size: 1.125rem;
+        line-height: 2.75rem;
+        letter-spacing: 0.2rem;
+
+    }
+}
+/* --------------------mobile結束------------------- */
